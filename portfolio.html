@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anudit Adhikari | Python Developer Portfolio</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<!-- <style>
+  :root {
+    --primary: #f9b233;
+    --secondary: #22223b;
+    --light: #f8f8f8;
+    --accent: #4ea8de;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f3f2f7;
+    color: #22223b;
+    display: flex;
+  }
+
+  .sidebar {
+    width: 260px;
+    background: #fff;
+    padding: 2rem 1rem;
+    min-height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebar .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebar .profile img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .sidebar nav ul {
+    list-style: none;
+    width: 100%;
+  }
+
+  .sidebar nav ul li {
+    margin: 1rem 0;
+  }
+
+  .sidebar nav ul li a {
+    text-decoration: none;
+    color: var(--secondary);
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .sidebar nav ul li a:hover {
+    color: var(--primary);
+  }
+
+  .btn-primary {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+
+  .btn-secondary {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+
+  main {
+    margin-left: 260px;
+    width: 100%;
+    padding: 2rem;
+  }
+
+  section {
+    margin-bottom: 3rem;
+  }
+
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+    margin-bottom: 2rem;
+  }
+
+  .hero-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .highlight {
+    color: var(--primary);
+  }
+
+  .accent {
+    color: var(--accent);
+  }
+
+  .services,
+  .pricing,
+  .recommendations,
+  .education,
+  .work,
+  .portfolio,
+  .blog,
+  .contact {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  }
+
+  .service-cards,
+  .pricing-cards,
+  .recommend-cards,
+  .blog-cards {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+  }
+
+  .service-cards .card,
+  .pricing-cards .card,
+  .recommend-cards .card,
+  .blog-cards .card {
+    flex: 1;
+    background: var(--light);
+    padding: 1.2rem;
+    border-radius: 12px;
+    text-align: center;
+  }
+
+  .pricing-cards .highlight {
+    border: 2px solid var(--primary);
+    background: #fffbe6;
+  }
+
+  .pricing-cards .price {
+    font-size: 2rem;
+    color: var(--primary);
+    margin: 1rem 0;
+  }
+
+  .timeline>div {
+    margin-bottom: 1rem;
+  }
+
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .portfolio-grid img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  .contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact form input,
+  .contact form textarea {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+
+  .contact-info {
+    font-size: 1rem;
+  }
+
+  .map img {
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 1rem;
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 900px) {
+    .sidebar {
+      position: absolute;
+      left: -260px;
+      transition: left 0.3s;
+    }
+
+    .sidebar.active {
+      left: 0;
+    }
+
+    main {
+      margin-left: 0;
+      padding: 1rem;
+    }
+
+    .hero {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .service-cards,
+    .pricing-cards,
+    .recommend-cards,
+    .blog-cards {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+
+  .menu-toggle {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    z-index: 200;
+  }
+
+  @media (max-width: 900px) {
+    .menu-toggle {
+      display: block;
+    }
+  }
+
+  .project-card {
+    background: var(--light);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .project-card h3 {
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+  }
+
+  .tech-stack {
+    font-size: 0.95rem;
+    color: var(--accent);
+    margin-bottom: 0.7rem;
+  }
+
+  .project-details {
+    list-style-type: disc;
+    padding-left: 1.2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .project-details li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+  }
+
+  .work-card {
+    background: var(--light);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .work-card h4 {
+    margin-bottom: 0.3rem;
+    color: var(--primary);
+    font-size: 1.2rem;
+  }
+
+  .work-duration {
+    font-size: 0.98rem;
+    color: var(--accent);
+    margin-bottom: 0.7rem;
+  }
+
+  .work-duration span {
+    color: var(--secondary);
+    font-weight: 500;
+  }
+
+  .work-details {
+    list-style-type: disc;
+    padding-left: 1.2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .work-details li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+  }
+
+  .skills-section {
+    margin-top: 2rem;
+  }
+
+  .skills-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 100%;
+    margin-bottom: 2rem;
+    justify-content: space-between;
+  }
+
+  .skills-row .skills-group {
+    background: var(--light);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    padding: 1.2rem 1.5rem;
+    min-width: 180px;
+    flex: 1;
+  }
+
+  .skills-group h3 {
+    color: var(--primary);
+    margin-bottom: 0.7rem;
+    font-size: 1.08rem;
+    text-align: left;
+  }
+
+  .skills-list {
+    list-style-type: disc;
+    padding-left: 1.2rem;
+    margin: 0;
+  }
+
+  .skills-list li {
+    margin-bottom: 0.4rem;
+    font-size: 0.98rem;
+    color: var(--secondary);
+    line-height: 1.5;
+  }
+
+  @media (max-width: 1200px) {
+    .skills-row {
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+  }
+</style> -->
+
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="profile">
+      <img src="lin.jpg" alt="Profile Photo">
+      <h2>Anudit Adhikari</h2>
+      <p>Python Developer</p>
+      <a href="./Anudit_Adhikari_CV.pdf" download>
+        <button class="btn-primary">Download CV</button>
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#services">Skills & Capabilities</a></li>
+        <!-- <li><a href="#pricing">Pricing</a></li> -->
+        <!-- <li><a href="#recommendations">Recommendations</a></li> -->
+        <li><a href="#education">Education</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#portfolio">Projects</a></li>
+        <!-- <li><a href="#blog">Blog</a></li> -->
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div>
+        <h1>I'm <span class="highlight">Anudit Adhikari</span><br>
+          <span class="accent">Python Developer</span>
+        </h1>
+        <!-- <button class="btn-primary">Hire Me</button> -->
+      </div>
+      <img src="lin.jpg" alt="Profile Photo" class="hero-img">
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="services">
+      <h2>Skills & Capabilities</h2>
+      <div class="service-cards">
+        <div class="card">Web Development</div>
+        <div class="card">Backend API Development</div>
+        <div class="card">Database Design & Management</div>
+        <div class="card">DevOps & Deployment</div>
+        <div class="card">System Integration</div>
+        <div class="card">Automation Scripting</div>
+      </div>
+      <div class="skills-section">
+        <div class="skills-row">
+          <div class="skills-group">
+            <h3>Languages</h3>
+            <ul class="skills-list">
+              <li>Python</li>
+              <li>JavaScript</li>
+              <li>HTML</li>
+              <li>CSS</li>
+            </ul>
+            <h3>Databases</h3>
+            <ul class="skills-list">
+              <li>PostgreSQL</li>
+              <li>MySQL</li>
+              <li>SQLite</li>
+              <li>Redis</li>
+            </ul>
+          </div>
+          <!-- <div class="skills-group">
+            
+          </div> -->
+          <div class="skills-group">
+            <h3>Frameworks & Libraries</h3>
+            <ul class="skills-list">
+              <li>Django</li>
+              <li>Django REST</li>
+              <li>GraphQL</li>
+              <li>Pandas</li>
+              <li>NumPy</li>
+              <li>Matplotlib</li>
+              <li>TensorFlow</li>
+              <li>PyTorch</li>
+            </ul>
+          </div>
+          <div class="skills-group">
+            <h3>APIs & Microservices</h3>
+            <ul class="skills-list">
+              <li>REST</li>
+              <li>SOAP</li>
+              <li>Authentication & Authorization (OAuth, JWT, CSRF)</li>
+            </ul>
+          </div>
+          <div class="skills-group">
+            <h3>Cloud & DevOps</h3>
+            <ul class="skills-list">
+              <li>AWS EC2</li>
+              <li>Docker</li>
+              <li>Git</li>
+              <li>Nginx</li>
+              <li>Gunicorn</li>
+              <li>Celery</li>
+              <li>CI/CD</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing 
+    <section id="pricing" class="pricing">
+      <h2>Price Plans</h2>
+      <div class="pricing-cards">
+        <div class="card">
+          <h3>Basic</h3>
+          <p class="price">$30.00</p>
+          <ul>
+            <li>1 Page Website</li>
+            <li>Responsive Design</li>
+            <li>Email Support</li>
+          </ul>
+          <button class="btn-secondary">Select</button>
+        </div>
+        <div class="card highlight">
+          <h3>Gold</h3>
+          <p class="price">$50.00</p>
+          <ul>
+            <li>5 Page Website</li>
+            <li>UI/UX Design</li>
+            <li>Priority Support</li>
+          </ul>
+          <button class="btn-primary">Select</button>
+        </div>
+        <div class="card">
+          <h3>Diamond</h3>
+          <p class="price">$80.00</p>
+          <ul>
+            <li>10 Page Website</li>
+            <li>Custom Features</li>
+            <li>24/7 Support</li>
+          </ul>
+          <button class="btn-secondary">Select</button>
+        </div>
+      </div>
+    </section>
+    -->
+    <!-- Recommendations 
+    <section id="recommendations" class="recommendations">
+      <h2>Recommendations</h2>
+      <div class="recommend-cards">
+        <div class="card">
+          <p>"Great to work with!"</p>
+          <span>- Client A</span>
+        </div>
+        <div class="card">
+          <p>"Delivered on time and exceeded expectations."</p>
+          <span>- Client B</span>
+        </div>
+        <div class="card">
+          <p>"Highly recommended."</p>
+          <span>- Client C</span>
+        </div>
+      </div>
+    </section>
+    -->
+    <!-- Education -->
+    <section id="education" class="education">
+      <h2>Education</h2>
+
+      <div class="timeline" style="margin-top: 1rem;">
+        <div>
+          <h4>Institute of Engineering, Pulchowk Campus</h4>
+          <p>MSc. in Computer Systems and Knowledge Engineering</p>
+        </div>
+        <div>
+          <h4>Himalaya College of Engineering</h4>
+          <p>Bachelors’ in Computer Engineering</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work History -->
+    <section id="work" class="work">
+      <h2 style="margin:0.5rem;">Work History</h2>
+      <div class="work-card">
+        <h4>Python Developer</h4>
+        <p class="work-duration">Pathway Technologies and Services <span>(July 2022 - Current)</span></p>
+        <ul class="work-details">
+          <li>Developed and maintained scalable web applications using Python (Django and Django REST Framework)
+            supporting growing user base without performance degradation.</li>
+          <li>Designed, built, and optimized RESTful APIs to support front-end requirements, driving 70% faster response
+            times via ORM and DB queries, resulting in better user experience.</li>
+          <li>Managed deployment and server management on AWS (EC2, secure VPN); implemented automated disaster
+            recovery/backup solutions, ensuring 99% uptime.</li>
+          <li>Engineered secure payment processing system using third-party APIs and expanding payment options for
+            customers, fortifying data protection through OAuth and JWT, resulting in zero reported breaches.</li>
+          <li>Implemented CI/CD pipelines with GitHub Actions, cutting deployment cycles and minimizing release-related
+            issues, ensuring faster, more reliable rollouts.</li>
+          <li>Led code reviews, mentored junior developers, and fostered a collaborative, high-performing engineering
+            team.</li>
+          <li>Troubleshot and resolved complex production issues and coordinated cross-functional efforts with
+            frontend/mobile teams to deliver seamless solutions reducing downtime incidents.</li>
+        </ul>
+      </div>
+      <!-- <div class="work-card">
+        <h4>Senior Developer</h4>
+        <p class="work-duration">Company B <span>(2021-Present)</span></p>
+      </div> -->
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="portfolio">
+      <h2 style="margin:0.5rem;">Projects</h2>
+      <div class="timeline">
+        <div class="project-card">
+          <a href="https://tripturbo.com" style="text-decoration: none; color: inherit;">
+            <h3>Tripturbo</h3>
+          </a>
+          <p class="tech-stack"><strong>Tech Stack:</strong> Python, Django, Django REST Framework, PostgreSQL, AWS,
+            Redis, Celery</p>
+          <ul class="project-details">
+            <li><strong>Travel Marketplace Platform:</strong> Started and launched the travel marketplace platform with
+              ticketing and promo/voucher code features for multiple services like Domestic Flight, Bus, Activities,
+              Hotels and International Flights, optimizing operations and contributing to substantial business growth
+              across Nepal.</li>
+            <li><strong>Activity & Inventory Management System:</strong> Designed and implemented an integrated system
+              to manage activities and services from different parts of the country, improving operational efficiency
+              and enabling the customers to book any services without hassle through the system.</li>
+            <li><strong>Secure Payment Gateway Integration:</strong> Integrated wallets and banking systems with full
+              compliance, ensuring secure transactions with no reported breach and driving massive annual sales growth.
+            </li>
+            <li><strong>High-Availability Deployment:</strong> Managed AWS EC2 deployments with automated disaster
+              recovery, achieving 99% uptime and ensuring rapid recovery from incidents.</li>
+            <li><strong>Performance Optimization:</strong> Improved API response times by 70% by tuning ORM query and
+              optimizing database, enhancing user experience and system scalability.</li>
+          </ul>
+        </div>
+        <div class="project-card">
+          <h3>Other Projects</h3>
+          <ul class="project-details">
+            <li><strong>Image Colorization with Self Attention GANs:</strong> Built attention-based GAN models to
+              colorize grayscale images with high visual fidelity.</li>
+            <li><strong>Standard Map Generation with GANs:</strong> Implemented a GAN model to generate standardized
+              maps from raw satellite imagery.</li>
+            <li><strong>AI Spam Filtering for Real Estate Portal:</strong> Created a machine learning spam classifier
+              for real estate listings.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog 
+    <section id="blog" class="blog">
+      <h2>Blog</h2>
+      <div class="blog-cards">
+        <div class="card">
+          <img src="blog1.jpg" alt="Blog 1">
+          <h4>How to Build Responsive Sites</h4>
+        </div>
+        <div class="card">
+          <img src="blog2.jpg" alt="Blog 2">
+          <h4>UI/UX Best Practices</h4>
+        </div>
+        <div class="card">
+          <img src="blog3.jpg" alt="Blog 3">
+          <h4>Top JavaScript Frameworks</h4>
+        </div>
+      </div>
+    </section>
+    -->
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+      <h2 style="margin:0.5rem">Contact</h2>
+      <!-- <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button class="btn-primary" type="submit">Send</button>
+      </form> -->
+      <div class="contact-info">
+        <p>Email: adhikari.anudit@gmail.com</p>
+        <p>Phone: +977 9861543073</p>
+        <p>Location: Kathmandu, Nepal</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Responsive Menu Button -->
+  <button class="menu-toggle" id="menuToggle">&#9776;</button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
